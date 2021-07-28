@@ -15,10 +15,10 @@ pipeline {
                                 steps {
                                        sh 'mvn test'
                         }
-                    post {
-                    always {
-                        junit 'target/*.xml'
-                        }
+               post {
+                always {
+                junit allowEmptyResults: true, testResults : 'target/*.xml'
+                }
                 }
          }
             stage('Integration testing') {
