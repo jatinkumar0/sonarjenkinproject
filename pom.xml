@@ -41,7 +41,7 @@
         <mockito-core.version>2.8.47</mockito-core.version>
         <swagger.version>2.9.2</swagger.version>
         <logback.version>1.2.3</logback.version>
-        <cucumber-version>1.2.6</cucumber-version>
+       # <cucumber-version>1.2.6</cucumber-version>
         <modelmapper-version>2.3.6</modelmapper-version>
         <lombok-version>1.18.10</lombok-version>
         <!-- add the rest controller list for swaggaer -->
@@ -159,8 +159,8 @@
         </dependency>
         <dependency>
             <groupId>info.cukes</groupId>
-            <artifactId>cucumber-spring</artifactId>
-            <version>${cucumber-version}</version>
+            #<artifactId>cucumber-spring</artifactId>
+            #<version>${cucumber-version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
