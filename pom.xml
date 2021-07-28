@@ -181,20 +181,6 @@
     <build>
         <finalName>${project.artifact.name}-${project.version}-${build.number}</finalName>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <jvmArguments>-Xmx512m -XX:MaxDirectMemorySize=1200m</jvmArguments>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>build-info</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
              <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <configuration>
