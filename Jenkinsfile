@@ -28,13 +28,13 @@ pipeline {
         }
             stage('sonarqube integration') {
                 steps {
-                    withSonarQubeEnv(credentialsId: 'sonar', installationName: 'sonar'){
-                        sh 'java -jar jacococli.jar report target/jacoco.exec --classfiles target/  --xml target/report.xml'
-                       sh 'mvn sonar:sonar \
-                                                           -Dsonar.tests=src/test/ \
-                                                   -Dsonar.junit.reportsPath=target/ \
-                                               -Dsonar.coverage.jacoco.xmlReportPaths=target/report.xml'
-            }
+                    #withSonarQubeEnv(credentialsId: 'sonar', installationName: 'sonar'){
+                    #    sh 'java -jar jacococli.jar report target/jacoco.exec --classfiles target/  --xml target/report.xml'
+                         sh 'mvn sonar:sonar \
+                        -Dsonar.tests=src/test/ \
+                        -Dsonar.junit.reportsPath=target/ \
+                        -Dsonar.coverage.jacoco.xmlReportPaths=target/report.xml'
+            #}
         }
             }
             stage('Package')
